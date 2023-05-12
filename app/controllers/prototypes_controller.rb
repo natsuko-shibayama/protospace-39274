@@ -15,6 +15,7 @@ class PrototypesController < ApplicationController
     if @prototype.save
       redirect_to root_path
     else
+      @prototype = Prototype.new(prototype_params)
       render :new
     end
   end
