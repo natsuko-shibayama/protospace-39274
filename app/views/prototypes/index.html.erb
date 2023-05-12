@@ -5,7 +5,7 @@
         <%= "こんにちは、" %>
         <%= link_to "#{current_user.name}さん", user_path(current_user), class: :greeting__link %>
       </div>
-      <%= render partial: 'prototype', collection: @prototypes %>
+      
     <% else %>
       <% if current_user.present? %>
         <div class="card__wrapper">
@@ -15,6 +15,6 @@
         </div>
       <% end %> 
     <% end %>
-    
+    <%= render partial: 'prototype', collection: @prototypes %>
   </div>
 </main>
